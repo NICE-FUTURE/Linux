@@ -1,0 +1,56 @@
+    After lesson4, every directary's name will not mean I learnt the things in the directary in an exact lesson. Maybe I learnt that in many veios and in many days, but I collect them in a same directary because I don't want to make my directary too full. 
+    And today (2017.12.26) I learnt something about compress ( something do for zip ). I knew the most common commend was "gzip" to make it less and "gunzip" to read the original file. 
+    Before that, I reviewed the "ln" commend ( it was not the same with "link" commed !!! ), and I found that I can't do any thing with the soft link I created. ( "ln -s xxxxx" ).
+    Next I learnt the "locate" commend, unfortunately this CentOS 7 system was so simple that it didn't install the "locate" commend. So, I trying to install it, but it didn't work after I entered "yum install locate". Luckily I found the reason on In ternet, in my system I should have enter "yum install mlocate". Then I installed it successfull. And I knew that I should run the "updatedb"commend to update the datebase of locate forced in root identification. Normally it will update by itself once a day. Any file created before it update can not be found out, and the file in some place can't be found either, such as "/temp/" and so on.
+    Then today (2018.1.1) I learnt "whereis" and "which" commend, "whereis" commend is used to search where is the commend, pay attention: it's commend itself. And it will find out the place where the commend is and it's help file the same time. It can not find user's file. In addition, "whereis -b" is find the commend itself in bin/ directory and "whereis -m" is find the commend's help file. "which" commend is used to find out the commend's alias, if it don't have alias, it will return nothing. You have to know that both commends are rely on the path of
+ your computer.
+    "CTR-C" is not useful in CentOS 7, it should be instead by "clear" commend.
+    "whoami": print the user's name
+    "whatis": print what the commed use
+
+find":
+    "find" commend: eg: "find / -name install.log" ->  " find [range] [option] [file_name] ". 
+    1.Avoid find something in a wide range. 
+    2."find" will find the file match completely.
+    3.the range you want to find in must be absolutely path
+
+    If you want to find something in a vague way, learn to use wildcard characters( '*', '?', '[]' )
+    '*': anything (one or more character)
+    '?': anything (only one character)
+    '[]': any character in the '[]'(one of them)
+
+    [-name]: find the file by name
+    [-iname]: find the file by name, and make it no difference between upper and lower letter
+    [-user]: find the file by user
+    [-nouser]: find the file those belong to no one
+
+eg: find /var/log/ -mtime +10
+
+    [-mtime]: find the file by the time that the file's content last be changed
+    [-ctime]: find the file by the time that the file's property last be change
+    [-atime]: find the file by the time last be visited
+
+    [-10]: It means from 10 days ago to now 
+    [ 10]: It means the 24 hours 10 days ago
+    [+10]: It means the days before 10 days ago
+
+         +10           10           -10          today
+    _________________|____|_______________________|
+
+eg: find /root -size 25k
+
+    [-25k]: The size less than 25k
+    [ 25k]: The size is equal to 25k
+    [+25k]: The size more than 25k
+    You can use 25k or 25M ( 'k'is lower, 'M' is upper )
+
+eg: find /etc -size +20k -a -size -50k
+    It will find the file bigger than 20k and small than 50k
+
+eg: find /etc -size +20k -a -size -50k -exec ls -lh {} \;
+                                       __________________
+    You can use " -exec ...... {} \; " to find one file and do something with it
+
+eg: find /root -inum 262422
+    You know "ls -i" commend can list the file list with it's inode
+    So you can find the file if you know it's inode

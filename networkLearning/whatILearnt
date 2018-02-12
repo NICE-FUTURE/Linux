@@ -1,0 +1,14 @@
+Show the network environment in linux.----------------------------------
+	ifconfig: Use this commend, it will show the inet(ip) and netmask. Ofcause, it includes other imformation.
+	ifup / ifdown: This commend is used to open a network or shut down a network.
+	netstat -tuln: This commend will show the ip and port's state, is listening or somethig others.
+		-an: This commend will show more thing than -tuln, it will list or the state imformation, include the applications state.
+		   And you can use one commend to count how many Users are using your server. Like this:
+			" netstat -an | grep ESTABLISHED | wc -l "
+		"wc" is used to count something like this, -l means count once a line. ESTABLISHED means it was connected.
+		-rn: This commend will list the gateway's imformation. Just like the "route" commend. The difference is the route commend can be used to change the gateway, but it's not a good idea to do this.
+	nslookup: This commend can show the DNS, and translate the domain(eg: www.google.com) to ip(eg: 114.*******). If you just want to know the dns, you can do this:
+			...]$ nslookup [ENTER]
+			...]$ >server [ENTER]
+		And then it will show the dns imformation. And use "exit" to back shell.
+

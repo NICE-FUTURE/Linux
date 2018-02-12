@@ -1,0 +1,9 @@
+    first, In this class, I learnt how to use '>', '>>', '<'in Linux. By using '>'and  '>>'I can write the output in a file, such as "output.txt". The difference is   that if you use '>', the new file will replace the old file, and if you use '>>'the new file will be writen down after the old file. 
+    Second, I learnt how to use the "int main (int argv, char* argc[])".
+    Third, after this class I knew that "printf("Hello, %s", name);" is equal to "fprintf(stdout,"Hello, %s", name);". So, it is no different for "stdin", "stderr".
+    Fourth, I knew how to use the " && " commend and " echo $? " commend.
+    
+
+    "grep" commend is used to find the files that contains some letters which you point out. For example, "grep ab" means to find out all the files contains the "ab" letter.
+    "ps" commend is used to list all the process in your computer.
+    "ln"commend: It means "link", just like the link in windows system. Use "ln" only, means create the link in a hard way which as if you made a new door for your room; But if you use " ln -s " means you want to create the link in a soft way which the same as the link in windows system. Last but not least, if you use soft link you have to write down the complete name unless your beginning file was at the same place with the link you created.

@@ -1,0 +1,7 @@
+    In this directionary, I learnt how to type my first code in linux. And I print "Hello World !!!"successfully. (helloworld.c)  Otherwise I also learnt how to open and edit two file at the same window. (tryTwoVim.c) Then I learnt to use the "make" commend. (Makefile) 
+
+Pay attention: 
+    1.Whenever you want or need to input some number, espeicially your password. Don't use the number keyboard!!! Beacause you will often forget that it is loked!!!
+    2.If you want to use the "make" commend, please enter "make", not "make [filename]".
+    3.It still remains a problem. Just as you can see, every letter 'o' was in an orange background. I don't know how to getover it now. But I will try to getover it today.
+    I find the ANSWER: Just in vim, the commend is ":nohighlight" or ":nohl".

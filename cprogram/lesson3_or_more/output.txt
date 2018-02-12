@@ -1,0 +1,2 @@
+Please input a value : 
+Happy to see you.	You value is 34.

@@ -1,0 +1,5 @@
+    This text is prepared for link test. And this text will be linked to /lesson4/forlink.txt.soft and /lesson4/forlink.txt.hard also.
+    And now when you see this file, the original file was deleted, and you are reading this file through its hard link.
+
+Q:
+    I can't do anything through the soft link anyway.

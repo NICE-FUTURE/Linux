@@ -1,0 +1,23 @@
+1.zip(.zip)---------------------------------------------------------------------
+	a. " zip [compressed_file_name] [original_file_name] " to compress a file.
+	b. " zip -r [compressed_directory_name] [original_directory_name] " to compress a directory.
+	c. " unzip [compressed_directory(/file)_name] " to decompress the file or directory.
+	d. zip commend will reserve the original file or directory.
+2.gzip(.gz)---------------------------------------------------------------------
+	a. " gzip [original_name] " to compress file. It will not reserve the original file.
+	b. " gzip -c [original_name] > [compressed_directory_name] " to reserve the original file.
+	c " gzip -r [directory_name] " to compress a directory. But it only compress all the files in this directory, not compress itself.
+	d " gunzip [compressed_file_name] " or " gzip -d [compressed_file_name] " to decompress a file. 
+3.bzip2(.bz2)-------------------------------------------------------------------	a. " bzip2 [original_file_name] " to compress a file. But it won't reserve its original file.
+	b. " bzip2 -k [original_file_name] " to compress a file. And it will reserve its original file. 
+	c. This commend can't be used to compress a directory.
+4.tar(.tar)--------------------------------------------------------------------
+	a. " tar -cvf [backpack_directory_name] [original_directory_name] " to backpack a directory. Then you can compress it as a file.
+	b. " tar -xvf [backpacked_directory_name] " to unpack the directory.
+	c. This commend just backpack a directory without compress.
+5.tar(.tar.gz)-----------------------------------------------------------------
+	a. " tar -zcvf [backpacked_directory_name] " to backpack and compress a directory.
+	b. " tar -zxvf [backpacked_directory_name] " to unpack and decompress a directory. 
+6.tar(.tar.bz2)----------------------------------------------------------------
+	Like ".tar.gz" types, just change the argument [-zcvf/-zxvf] to [-jcvf/-jxvf].
+
