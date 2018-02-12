@@ -1,0 +1,6 @@
+#ignore all the files end with '~'
+*~
+
+#ignore all the files end with '.o'
+*.o
+
